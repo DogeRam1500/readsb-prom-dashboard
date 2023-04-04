@@ -1,4 +1,41 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_READSB",
+      "label": "readsb",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "9.4.7"
+    },
+    {
+      "type": "datasource",
+      "id": "prometheus",
+      "name": "Prometheus",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "stat",
+      "name": "Stat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -26,14 +63,14 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 18398,
   "graphTooltip": 0,
-  "id": 2,
+  "id": null,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -79,7 +116,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "code",
           "expr": "max(readsb_aircraft_total{})",
@@ -94,7 +131,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -142,7 +179,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_distance_max * 0.000539957",
@@ -158,7 +195,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -207,7 +244,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_rssi_average",
@@ -218,7 +255,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_local_noise",
@@ -236,7 +273,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -309,7 +346,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_total",
@@ -320,7 +357,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_adsb_icao",
@@ -332,7 +369,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_mlat",
@@ -344,7 +381,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "",
@@ -356,7 +393,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_mode_ac",
@@ -368,7 +405,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_tisb_icao",
@@ -380,7 +417,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_adsr_icao",
@@ -392,7 +429,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_adsc",
@@ -408,7 +445,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -510,7 +547,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_total_tracks{job=\"dump978\"}",
@@ -522,7 +559,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_adsb_tracks{job=\"dump978\"}",
@@ -533,7 +570,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_adsr_tracks{job=\"dump978\"}",
@@ -545,7 +582,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_tisb_tracks{job=\"dump978\"}",
@@ -561,7 +598,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "description": "",
       "fieldConfig": {
@@ -648,7 +685,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "code",
           "expr": "readsb_distance_max * 0.000539957",
@@ -659,7 +696,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "code",
           "expr": "readsb_distance_min * 0.000539957",
@@ -675,7 +712,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -754,7 +791,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_max_distance_m{job=\"dump978\"} / 1000",
@@ -769,7 +806,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -846,7 +883,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_total_accepted_messages{job=\"dump978\"}",
@@ -861,7 +898,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "description": "Aircraft models with most messages received",
       "fieldConfig": {
@@ -915,8 +952,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -953,7 +989,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "code",
           "expr": "topk(10, sum(sum_over_time(readsb_aircraft_messages[$__range])) by (t))/($__range_ms/$__interval_ms)/1000000\n",
@@ -984,7 +1020,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1026,8 +1062,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -1111,7 +1146,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_messages{})",
@@ -1122,7 +1157,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_local_strong_signals{}",
@@ -1134,7 +1169,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_cpr_local_ok) / 60",
@@ -1150,7 +1185,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1193,8 +1228,7 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "green",
@@ -1231,7 +1265,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_position_count_total)",
@@ -1246,7 +1280,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1289,8 +1323,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           }
@@ -1343,7 +1376,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_tracks_with_position{})",
@@ -1354,7 +1387,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_tracks_single_message{})",
@@ -1370,7 +1403,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1412,8 +1445,7 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "green",
@@ -1451,7 +1483,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "exemplar": false,
@@ -1464,7 +1496,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "exemplar": false,
@@ -1478,7 +1510,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1492,7 +1524,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_rssi_quart1",
@@ -1504,7 +1536,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_aircraft_rssi_quart3",
@@ -1520,7 +1552,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1563,8 +1595,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -1598,7 +1629,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_cpu_reader{}) / 60000",
@@ -1609,7 +1640,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_cpu_demod{}) / 60000",
@@ -1621,7 +1652,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "max(readsb_cpu_background{}) / 60000",
@@ -1637,7 +1668,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1679,8 +1710,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1717,7 +1747,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_peak_raw_rssi{job=\"dump978\"}",
@@ -1729,7 +1759,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_min_raw_rssi{job=\"dump978\"}",
@@ -1741,7 +1771,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_avg_accepted_rssi{job=\"dump978\"}",
@@ -1753,7 +1783,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "stats_min_accepted_rssi{job=\"dump978\"}",
@@ -1769,7 +1799,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1815,8 +1845,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1859,7 +1888,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_demod_estimated_ppm",
@@ -1876,7 +1905,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1920,8 +1949,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -1952,7 +1980,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "readsb_sdr_gain",
@@ -1967,7 +1995,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PFri86f4k"
+        "uid": "${DS_READSB}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2009,8 +2037,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2046,7 +2073,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "autogain_autogain_max_value",
@@ -2057,7 +2084,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "autogain_autogain_current_value",
@@ -2069,7 +2096,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PFri86f4k"
+            "uid": "${DS_READSB}"
           },
           "editorMode": "builder",
           "expr": "autogain_autogain_min_value",
@@ -2091,14 +2118,10 @@
   "templating": {
     "list": [
       {
-        "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
-        },
+        "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "PFri86f4k"
+          "uid": "${DS_READSB}"
         },
         "definition": "label_values(host)",
         "hide": 0,
